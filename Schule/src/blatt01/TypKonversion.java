@@ -22,8 +22,8 @@ public class TypKonversion {
         System.out.println(g);
         System.out.println(h);
 
-        boolean t = true;
-        h = (char) t;
+        //boolean t = true;
+        //h = (char) t;
 
     }
 }
