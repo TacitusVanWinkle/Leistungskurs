@@ -13,15 +13,20 @@ public class SpringImKreis {
         double x = input.nextDouble();
         System.out.println("Gebe deine y-Koordinate ein");
         double y = input.nextDouble();
-        if ((x * x) + (y * y) <= radius){
+
+        if ((x * x) + (y * y) < 1){
             System.out.println("Der Punkt (" + x + "|" + y + ") befindet sich im Einheitskreis!");
 
-        }
-        if ((y * y) + (x * x) == radius){
+        }else if ((y * y) + (x * x) == 1) {
             System.out.println("Der Punkt (" + x + "|" + y + ") befindet sich exakt auf dem Einheitskreis!");
         }
 
-        //TODO Math.sqrt(k) muss benutzt werden. Wie?
+        if (Math.sqrt((x * x) + (y * y)) < radius){
+            System.out.println("Der Punkt (" + x + "|" + y + ") befindet sich im Kreis!");
+        }else if (Math.sqrt((x * x) + (y * y)) == radius){
+            System.out.println("befindet sich exakt auf dem Kreis!");
+        }
+
     }
 
 }
