@@ -24,7 +24,7 @@ public class SpringImKreis {
         if (Math.sqrt((x * x) + (y * y)) < radius){
             System.out.println("Der Punkt (" + x + "|" + y + ") befindet sich im Kreis!");
         }else if (Math.sqrt((x * x) + (y * y)) == radius){
-            System.out.println("befindet sich exakt auf dem Kreis!");
+            System.out.println("Der Punkt (" + x + "|" + y + ") befindet sich exakt auf dem Kreis!");
         }
 
     }
