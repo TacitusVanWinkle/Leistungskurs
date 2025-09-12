@@ -35,15 +35,28 @@ public class Topfschlagen {
                 playerx += 1;
             }
 
+            if (playerx < 0){
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen!");
+                playerx = 0;
+            }else if  (playerx > 5){
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen!");
+                playerx = 5;
+            }
+
+            if (playery < 0){
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen!");
+                playery = 0;
+            }else if (playery > 5){
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen!");
+                playery = 5;
+            }
+
             System.out.println("Du befindest dich auf: (" + playerx + "|" + playery + ")" );
 
             if (playerx == topfx && playery == topfy){
                 System.out.println("Du hast gewonnen!");
                 break;
             }
-
         }
-
     }
-
 }

@@ -22,7 +22,8 @@ public class ETF {
                 sparbetrag += 50;
                 double neuerWert = zinssatz * sparbetrag;
                 monat = monat + 1;
-                System.out.println("Jahr: " + jahr + ", Monat: " + monat + "," + " Neuer Wert: " + neuerWert);
+                System.out.println("Jahr\tMonat\tSparbetrag\tZinssatz\tNeuer Wert");
+                System.out.println(jahr + "\t\t" + monat + "\t\t" + sparbetrag + "\t\t" + zinssatz + "\t\t" + neuerWert);
             }
             monat = 0;
             jahr++;
