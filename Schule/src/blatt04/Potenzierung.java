@@ -2,7 +2,7 @@ package blatt04;
 
 import java.util.Scanner;
 
-public class Poternzierung {
+public class Potenzierung {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
