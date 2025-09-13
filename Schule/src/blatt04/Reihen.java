@@ -42,8 +42,9 @@ public class Reihen {
         }
         System.out.println("\n\nReihe 4:");
         while (variable4 < anzahl) {
+            reihe4 = reihe4 * -1;
             System.out.print(reihe4 + ", ");
-            reihe4 = reihe4 + 1;
+            reihe4 = reihe4 - 1;
             variable4++;
         }
     }
