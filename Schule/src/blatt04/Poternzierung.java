@@ -11,12 +11,21 @@ public class Poternzierung {
         System.out.println("Geben Sie den Exponenten ein.");
         int exponent = input.nextInt();
 
-        int ergebnis = 1;
+        double ergebnis = 1;
         int variable = 0;
-        while (variable < exponent){
-            ergebnis = ergebnis * zahl;
-            variable ++;
+
+        if (exponent >= 0) {
+            while (variable < exponent) {
+                ergebnis = ergebnis * zahl;
+                variable++;
             }
-            System.out.println(zahl + "^" + exponent + " = " + ergebnis);
+        } else if (exponent < 0) {
+            while (variable > exponent) {
+                ergebnis = ergebnis * zahl;
+                variable--;
+            }
+            ergebnis = 1 / ergebnis;
+        }
+        System.out.println(zahl + "^" + exponent + " = " + ergebnis);
         }
     }
