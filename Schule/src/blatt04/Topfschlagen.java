@@ -14,11 +14,12 @@ public class Topfschlagen {
         int topfy = new Random().nextInt(5) + 1;
         int playerx = 3;
         int playery = 3;
+        int abstandAlt = Math.abs(topfx - playerx) + Math.abs(topfy - playery);
         System.out.println("Du befindest dich auf 3|3 \nDrücke die Tasten W, A, S und D um dich zu bewegen");
 
         while (true){
 
-            char bewegung = input.next().charAt(0);
+            char bewegung = input.next().toUpperCase().charAt(0);
             if (bewegung == 'W'){
                 playery += 1;
             }
@@ -57,6 +58,15 @@ public class Topfschlagen {
                 System.out.println("Du hast gewonnen!");
                 break;
             }
+            int abstandNeu = Math.abs(topfx - playerx) + Math.abs(topfy - playery);
+            if (abstandAlt > abstandNeu) {
+                System.out.println("Wärmer");
+            }
+            else if (abstandAlt < abstandNeu) {
+                System.out.println("Kälter");
+            }
+            else System.out.println("Lauwarm");
+            abstandAlt = abstandNeu;
         }
     }
 }
