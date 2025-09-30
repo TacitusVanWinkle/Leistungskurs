@@ -15,7 +15,7 @@ public class Topfschlagen {
         int playerx = 3;
         int playery = 3;
         int abstandAlt = Math.abs(topfx - playerx) + Math.abs(topfy - playery);
-        System.out.println("Du befindest dich auf 3|3 \nDrücke die Tasten W, A, S und D um dich zu bewegen");
+        System.out.println("Du befindest dich auf 3|3 auf einem 5x5 Feld \nDrücke die Tasten W, A, S und D um dich zu bewegen");
 
         while (true){
 

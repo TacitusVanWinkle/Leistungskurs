@@ -1,4 +1,4 @@
-package blatt06;
+/*package blatt06;
 
 import java.util.Scanner;
 
@@ -43,3 +43,4 @@ public class Dart {
         }
     }
 }
+ */
