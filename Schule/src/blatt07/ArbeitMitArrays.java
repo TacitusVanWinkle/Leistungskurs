@@ -1,5 +1,7 @@
 package blatt07;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class ArbeitMitArrays {
 
     public static void printArray(int[] arr) {
@@ -57,6 +59,36 @@ public class ArbeitMitArrays {
         System.out.print("] \n");
     }
 
+    public static void shiftLeft(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int [i] = int [i + 1];
+
+        }
+    }
+
+    public static boolean istSortiert (int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int[] addieren (int[] arr1, int[] arr2) {
+        int[] ergebnis;
+        if (arr1.length > arr2.length) {
+            ergebnis = arr1;
+        } else {
+            ergebnis = arr2;
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            ergebnis[i] += arr1[i];
+        }
+        printArray(ergebnis);
+        return ergebnis;
+    }
+
     public static void main(String[] args) {
 
         int[] arr = {1, 2, 3, 4, 5};
@@ -69,5 +101,11 @@ public class ArbeitMitArrays {
         printArray(arr2);
         printArray(arr3);
         printArray(arr4);
+
+        int[] arr5 = {3, 7, 1, 2, 5, 9, 20};
+        System.out.println(istSortiert(arr5));
+
+        int[] arr6 = {1, 2, 9, 10, 6,};
+        addieren(arr6, arr5);
     }
 }
