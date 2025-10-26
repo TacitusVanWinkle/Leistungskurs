@@ -27,6 +27,7 @@ public class Wertetabelle {
         for (int i = 0; i < x.length; i++) {
             x[i] = a + i; //Befülle alle x-Werte
         }
+        //Diese Schleife hat mir gefehlt, oder zumindest hatte ich sie falsch gemacht.
         //Für jeden x-Wert wollen wir den y-Wert bestimmen.
         double[] y = new double[x.length];
         for (int i = 0; i < x.length; i++) {
