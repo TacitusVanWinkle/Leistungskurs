@@ -60,10 +60,12 @@ public class ArbeitMitArrays {
     }
 
     public static void shiftLeft(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int [i] = int [i + 1];
-
+        int a = arr[0];
+        for (int i = 0; i <= arr.length-2; i++) {
+            arr[i] = arr[i+1];
         }
+        arr[arr.length-1] = a;
+        printArray(arr);
     }
 
     public static boolean istSortiert (int[] arr) {
@@ -107,5 +109,8 @@ public class ArbeitMitArrays {
 
         int[] arr6 = {1, 2, 9, 10, 6,};
         addieren(arr6, arr5);
+
+        int[] arr7 = {2, -1, -19, 13, 8, - 12};
+        shiftLeft(arr7);
     }
 }
