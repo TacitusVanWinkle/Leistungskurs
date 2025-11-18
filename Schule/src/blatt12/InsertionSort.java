@@ -20,11 +20,20 @@ public class InsertionSort {
         return arrSort;
     }
 
+    public static void insterionSortInPlace(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > arr[i + 1]) {
+                arr[i] = arr[i + 1];
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         int[] arr = new int[] { 14, 2, 36, -47, 5, 67, -67, 78, 9, -10 };
         arr = insertionSort(arr);
         blatt07.ArbeitMitArrays.printArray(arr);
+
 
     }
 }
