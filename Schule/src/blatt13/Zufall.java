@@ -1,5 +1,7 @@
 package blatt13;
 
+import blatt07.ArbeitMitArrays;
+
 public class Zufall {
 
     public static double zufall(int b) {
@@ -11,16 +13,16 @@ public class Zufall {
     }
 
     public static double zufall(int a, int b) {
-        return (Math.random() * b + a);
+        return (Math.random() * (b-a) + a);
     }
 
     public static int zufallGanz(int a, int b) {
-        return (int) (Math.random() * b + a);
+        return (int) (Math.random() * (b-a) + a);
     }
 
     public static int[] zufallArray(int l, int a, int b) {
         int[] arr = new int[l];
-        for (int i = 0; i < b; i++) {
+        for (int i = 0; i < l; i++) {
             arr[i] = zufallGanz(a,b);
         }
         return arr;
@@ -29,7 +31,9 @@ public class Zufall {
     public static void main(String[] args) {
         System.out.println(zufallGanz(5));
 
-        System.out.println(zufall(0, 5));
+        System.out.println(zufall(12, 22));
+
+        ArbeitMitArrays.printArray(zufallArray(5, 12, 22));
     }
 
 }
