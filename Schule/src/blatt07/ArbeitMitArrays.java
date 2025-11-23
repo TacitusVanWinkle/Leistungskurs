@@ -60,10 +60,39 @@ public class ArbeitMitArrays {
     }
 
     public static void shiftLeft(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            int [i] = int [i + 1];
-
+        int a = arr[0];
+        for (int i = 0; i <= arr.length-2; i++) {
+            arr[i] = arr[i+1];
         }
+        arr[arr.length-1] = a;
+        printArray(arr);
+    }
+
+    public static void shiftRight(int[] arr) {
+        int a = arr[arr.length-1];
+        for (int i = arr.length-1; i > 0; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[0] = a;
+        printArray(arr);
+    }
+
+    public static void shiftLeftAbsolute(int[] arr) {
+        int a = arr[0];
+        for (int i = 0; i <= arr.length-2; i++) {
+            arr[i] = arr[i+1];
+        }
+        arr[arr.length-1] = 0;
+        printArray(arr);
+    }
+
+    public static void shiftRightAbsolute(int[] arr) {
+        int a = arr[arr.length-1];
+        for (int i = arr.length-1; i > 0; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[0] = 0;
+        printArray(arr);
     }
 
     public static boolean istSortiert (int[] arr) {
@@ -105,7 +134,19 @@ public class ArbeitMitArrays {
         int[] arr5 = {3, 7, 1, 2, 5, 9, 20};
         System.out.println(istSortiert(arr5));
 
-        int[] arr6 = {1, 2, 9, 10, 6,};
+        int[] arr6 = {1, 2, 9, 10, 6};
         addieren(arr6, arr5);
+
+        int[] arr7 = {2, -1, -19, 13, 8, - 12};
+        shiftLeft(arr7);
+
+        int[] arr8 = {3, 7, 1, 2, 5, 9, 20};
+        shiftRight(arr8);
+
+        int[] arr9 = {3, 7, 1, 2, 5, 9, 20};
+        shiftLeftAbsolute(arr9);
+
+        int[] arr10 = {3, 7, 1, 2, 5, 9, 20};
+        shiftRightAbsolute(arr10);
     }
 }
