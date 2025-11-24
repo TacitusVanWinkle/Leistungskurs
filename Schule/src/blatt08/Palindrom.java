@@ -12,16 +12,17 @@ public class Palindrom {
 
     public static boolean istPalindrom(String text) {
         String umgedreht = umdrehen(text);
-        if (umgedreht.equals(text)) {
-            return true;
-        }else
-            return false;
-        }
+        return umgedreht.equals(text);
+    }
 
 
 
     public static void main(String[] args) {
-        System.out.println(istPalindrom("Girafarig"));
+
+        //Test:
+        System.out.println(umdrehen("girafarig"));
+        System.out.println(istPalindrom("girafarig"));
+
     }
 
 }
