@@ -26,5 +26,8 @@ public class BubbleSort {
         blatt07.ArbeitMitArrays.printArray(arr);
 
         blatt07.ArbeitMitArrays.istSortiert(arr);
+
+        //O-Notation:n²
+        // Aufgabe 2) e)
     }
 }
