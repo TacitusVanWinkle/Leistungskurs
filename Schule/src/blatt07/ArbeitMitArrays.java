@@ -65,7 +65,6 @@ public class ArbeitMitArrays {
             arr[i] = arr[i+1];
         }
         arr[arr.length-1] = a;
-        printArray(arr);
     }
 
     public static void shiftRight(int[] arr) {
