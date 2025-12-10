@@ -12,7 +12,7 @@ public class OasenSuche {
     }
 
     public static void zufallsPositionSpieler() {
-        Simulationen.platzieren(spielfeld,'O',true);
+        Simulationen.platzieren(spielfeld,'P',true);
     }
 
     public static void wasserZufall(double ws) {
@@ -27,17 +27,30 @@ public class OasenSuche {
         }
     }
 
-    public static void findeSpieler
-
-    public static void findeWasser (SchischVisualizer sv, int energy) {
-
+    public static int[] findeSpieler() {
+        for (int i = 0; i < spielfeld.length; i++) {
+            for (int j = 0; j < spielfeld[i].length; j++) {
+                if (spielfeld[i][j] == 'P') {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return null;
     }
+
+    public static void findeWasser(SchischVisualizer sv, int energy) {
+        int Weg = blatt13.Zufall.zufallGanz(0, 4);
+        if (Weg == 0) {
+
+        }
+    }
+
 
 
 
     public static void main(String[] args) {
         SchischVisualizer sv = new SchischVisualizer();
-        initialisiereSpielfeld(20,20);
+        initialisiereSpielfeld(60,60);
         zufallsPositionSpieler();
         sv.step(spielfeld);
         wasserZufall(0.1);
@@ -45,5 +58,6 @@ public class OasenSuche {
         steinZufall(0.3);
         sv.step(spielfeld);
         sv.start();
+        blatt07.ArbeitMitArrays.printArray(findeSpieler());
     }
 }
