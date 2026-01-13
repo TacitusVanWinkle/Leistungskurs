@@ -78,6 +78,16 @@ public class MultiArrays {
         }
     }
 
+    public static char[][] copy2DCharArray(char[][] charr) {
+        char[][] charrCopy = new char[charr.length][charr[0].length];
+        for (int i = 0; i < charr.length; i++) {
+            for (int j = 0; j < charr[i].length; j++) {
+                charrCopy[i][j] = charr[i][j];
+            }
+        }
+        return charrCopy;
+    }
+
     public static boolean istIdentisch(char[][] arr1, char[][] arr2) {
         if (arr1.length != arr2.length) {
             return false;
