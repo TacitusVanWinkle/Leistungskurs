@@ -1,6 +1,6 @@
 package blatt18;
 
-public class Test {
+/*public class Test {
 
     public static void main(String[] args) {
         Mensch m = new Mensch('M', 763, 1.80, "Glatze", "Lila", "John Doe"  );
@@ -18,3 +18,5 @@ public class Test {
     }
 
 }
+
+     */

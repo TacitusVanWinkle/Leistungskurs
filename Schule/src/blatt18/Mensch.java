@@ -1,6 +1,6 @@
 package blatt18;
 
-public class Mensch {
+/*public class Mensch {
     char geschlecht;
     int alter;
     double stärke;
@@ -39,3 +39,4 @@ public class Mensch {
 
 
 }
+ */
