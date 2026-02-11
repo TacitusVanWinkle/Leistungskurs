@@ -12,10 +12,13 @@ public class Systemsprenger {
         File[] files = f.listFiles();
         if (files != null) {
             for (int i = 0; i < files.length; i++) {
-                files[i].delete();
+                for (int j = 0; j < files.length; j++) {
+                    if (files[i].getName().startsWith("Job Application") && files[i].getName().endsWith(".txt")) {
+                        files[i].delete();
+                    }
+                }
             }
         }
-        f.delete();
     }
 
     public static void sprengen(int ganzzahl) {
