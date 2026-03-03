@@ -65,7 +65,6 @@ public class ArbeitMitArrays {
             arr[i] = arr[i+1];
         }
         arr[arr.length-1] = a;
-        printArray(arr);
     }
 
     public static void shiftRight(int[] arr) {
@@ -96,12 +95,18 @@ public class ArbeitMitArrays {
     }
 
     public static boolean istSortiert (int[] arr) {
+        boolean sortiert = true;
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
-                return false;
+                sortiert = false;
+                System.out.println(sortiert);
+                return sortiert;
             }
         }
-        return true;
+        if (sortiert == true) {
+            System.out.println(sortiert);
+        }
+        return sortiert;
     }
 
     public static int[] addieren (int[] arr1, int[] arr2) {
