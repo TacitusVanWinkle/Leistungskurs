@@ -34,7 +34,7 @@ public class Fahrrad {
     }
 
     public void beschreibung() {
-        System.out.println("Fahrrad" + this.farben + ", " + this.gaenge + "Gänge" + this.marke + ", " + this.typ + ", " + this.reifendurchmesser + "Zoll, " +  this.existiertRuecklicht + ", " + this.existiertVorderlicht + ", " + this.reflektorenAnReifen + ", " + this.reflektorenAnPedalen + "," + this.exisiterZulassung);
+        System.out.println("Fahrrad" + this.farben + ", " + this.gaenge + "Gänge" + this.marke + ", " + this.typ + ", " + this.reifendurchmesser + "Zoll, " +  this.existiertRuecklicht + ", " + this.existiertVorderlicht + ", " + this.reflektorenAnReifen + ", " + this.reflektorenAnPedalen + "," + this.existiertZulassung);
     }
 
 
