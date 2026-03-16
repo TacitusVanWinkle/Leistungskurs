@@ -1,4 +1,4 @@
-package blatt20.aufgabe2;
+package blatt20.a2;
 
 public class Ofen {
     String Beheizungsmodus;
