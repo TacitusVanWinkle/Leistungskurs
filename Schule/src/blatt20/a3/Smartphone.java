@@ -24,6 +24,21 @@ public class Smartphone {
         this.akkustand = 100;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        //Referenz
+        if (this == o) {
+            return true;
+        }
+        if (o == null || !(o instanceof Smartphone)) {
+            return false;
+        }
+        //Cast
+        Smartphone a = (Smartphone) o;
+        return this.preis==(a.preis) &&
+                this.speicherplatz==(a.speicherplatz);
+    }
+
     public int getAkkustand() {
         return akkustand;
     }

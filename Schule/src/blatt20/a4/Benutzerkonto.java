@@ -7,13 +7,23 @@ public class Benutzerkonto {
     private String geburtstag;
     private String passwort;
     private int guthaben;
+    private String meinGutscheincode;
+    private String erstellungsdatum;
 
-    public Benutzerkonto(String benutzername, String email, String geburtstag, int Gutscheinguthaben) {
+    public Benutzerkonto(String benutzername, String email, String geburtstag, String passwort, String erstellungsdatum, String meinGutscheincode) { //TODO: für Gutscheinguthaben einen default;
+                                                                                                                            // passwort & meinGutscheincode fehlen als Parameter
+                                                                                                                            // Erstellungsdatum fehlt
         this.benutzername = benutzername;
         this.email = email;
         this.geburtstag = geburtstag;
         this.passwort = passwort;
         this.guthaben = 0;
+        this.erstellungsdatum = erstellungsdatum;
+        this.meinGutscheincode = meinGutscheincode;
+    }
+
+    public void anmelden() {
+
     }
 
     public void passwortAendern(String altesPasswort, String neuesPasswort) {
@@ -22,7 +32,13 @@ public class Benutzerkonto {
         }
     }
 
-    public void gutscheinEinloesen(int gutscheinGuthaben, String gutscheinCode) {
-        this.guthaben += gutscheinGuthaben;
+    public void gutscheinEinloesen( String gutscheinCode) {
+
+        if (gutscheinCode.equals(meinGutscheincode)) {
+            this.guthaben += 20;
+        }
     }
+
+
+    //TODO: Nutzer kann sich an- und abmelden und Guthaben einsehen
 }
