@@ -105,5 +105,6 @@ public class Smartphone {
             System.out.println("Ihr gerät hat nicht genug Speicherplatz");
             return false;
         }
+        return true;
     }
 }
